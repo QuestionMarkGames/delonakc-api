@@ -1,0 +1,19 @@
+mode: "prod" # 开发模式 "dev" or "prod"
+server:
+  port: 8088 # 服务端口监听
+  addr: "" # 绑定的IP地址
+database:
+  host: "mongodb"
+  port: 27017
+  db: "xxx"
+github:
+  clientId: ""
+  clientSecret: ""
+  login: ""
+  baseUrl: "https://github.com/login/oauth/authorize"
+  tokenUrl: "https://github.com/login/oauth/access_token"
+  infoUrl: "https://api.github.com/user"
+redis:
+  port: 6379
+  host: "redis"
+  expireTime: "604800s" # redis key 过期时间
