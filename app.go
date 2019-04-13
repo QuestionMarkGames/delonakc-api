@@ -23,5 +23,8 @@ func main() {
 
 	runner.Run(r, db, conf)
 
-	defer db.DB.Close()
+	defer func() {
+		db.DB.Close()
+		redis.Rd.Close()
+	}()
 }

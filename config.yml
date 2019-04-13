@@ -5,7 +5,7 @@ server:
 database:
   host: "mongodb"
   port: 27017
-  db: "xxx"
+  db: "delonakc"
 github:
   clientId: ""
   clientSecret: ""

@@ -11,7 +11,8 @@ COPY Gopkg.toml Gopkg.lock ./
 RUN dep ensure --vendor-only
 
 COPY . ./
-COPY config.yml /config.yml
+
+COPY ./config.yml /
 
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-X main.EnvMode=prod" -a -installsuffix nocgo -o /app app.go
 

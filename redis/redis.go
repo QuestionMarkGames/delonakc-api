@@ -14,7 +14,9 @@ var expireTime time.Duration
 
 func Start(conf *config.Conf) {
 
-	options, err := rd.ParseURL(fmt.Sprintf("redis://%s:%d", conf.Redis.Host, conf.Redis.Port))
+	url := fmt.Sprintf("redis://%s:%d", conf.Redis.Host, conf.Redis.Port)
+
+	options, err := rd.ParseURL(url)
 
 	if err != nil {
 		log.Fatal(err)
@@ -27,6 +29,7 @@ func Start(conf *config.Conf) {
 
 	_, err = Rd.Ping().Result()
 
+	log.Printf("url: %s\n", url)
 	if err != nil {
 		log.Println("redis connect failed!!!")
 		log.Fatal(err)

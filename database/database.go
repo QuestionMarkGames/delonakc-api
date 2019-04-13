@@ -7,11 +7,11 @@ import (
 )
 
 func New(host string, port int, db string) *MongoDB {
-	url := fmt.Sprintf("%s:%d/%s", host, port, db)
+	url := fmt.Sprintf("%s:%d", host, port)
 	session, err := mgo.Dial(url)
 
-	fmt.Println(url)
-	
+	log.Printf("url: %s\n", url)
+
 	if err != nil {
 		log.Println("Mongodb create failed:")
 		log.Fatal(err)
