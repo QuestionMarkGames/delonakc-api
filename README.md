@@ -16,4 +16,4 @@
 
 #### NOTE
 
->> 如果镜像拉去速度太慢，可以自己设置镜像加速器[地址](https://github.com/yeasy/docker_practice/blob/master/install/mirror.md)
+>> 如果镜像拉取速度太慢，可以自己设置镜像加速器[地址](https://github.com/yeasy/docker_practice/blob/master/install/mirror.md)
